@@ -1,0 +1,3 @@
+class Powermate::Device
+
+end
