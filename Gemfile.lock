@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    powermate (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -8,8 +13,6 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-rails (0.3.2)
-      pry (>= 0.9.10)
     rake (10.1.1)
     slop (3.5.0)
 
@@ -18,5 +21,6 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  pry-rails
+  powermate!
+  pry
   rake

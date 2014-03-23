@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
     gem.add_dependency d
   end
 
-  dependencies = %w'rake minitest'
+  dependencies = %w'rake minitest pry'
   dependencies.each do |d|
     gem.add_development_dependency d
   end
