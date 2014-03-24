@@ -2,17 +2,23 @@ require 'helper'
 
 describe Powermate do
 
-  #before do
-  #  @subject = Powermate.find
-  #end
-
-  it 'should respond to find' do
-    Powermate::Device.must_respond_to :find
+  it 'should respond to scan' do
+    Powermate::Device.must_respond_to :scan
   end
 
   it 'should find a powermate device' do
-    pmate = Powermate::Device.find
-    pmate.must_be_instance_of Powermate::Device
+    pmates = Powermate::Device.scan
+    pmates.first.must_be_instance_of Powermate::Device
+  end
+
+  it 'should open' do
+    pmates = Powermate::Device.scan
+    pmates.first.must_respond_to :open
+  end
+
+  it 'should close' do
+    pmates = Powermate::Device.scan
+    pmates.first.must_respond_to :close
   end
 
 
