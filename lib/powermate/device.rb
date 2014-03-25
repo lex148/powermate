@@ -57,12 +57,10 @@ class Powermate::Device
           event = Powermate::Event.new(bytes, @pressed)
           bytes = []
           @pressed = event.pressed
-          puts event.to_hash
-          #next if event.empty?
-          #@on_change_blocks.each{|w| w.call(event) }
-          #@on_rotate_blocks.each{|w| w.call(event) } if event.clockwise || event.counter_clockwise
-          #@on_clockwise_blocks.each{|w| w.call(event) } if event.clockwise
-          #@on_counter_clockwise_blocks.each{|w| w.call(event) } if event.counter_clockwise
+          @on_change_blocks.each{|w| w.call(event) }
+          @on_rotate_blocks.each{|w| w.call(event) } if event.clockwise || event.counter_clockwise
+          @on_clockwise_blocks.each{|w| w.call(event) } if event.clockwise
+          @on_counter_clockwise_blocks.each{|w| w.call(event) } if event.counter_clockwise
 
         end
 

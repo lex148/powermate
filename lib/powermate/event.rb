@@ -29,8 +29,5 @@ class Powermate::Event
     }
   end
 
-  def empty?
-    !@counter_clockwise && !@clockwise
-  end
 
 end
