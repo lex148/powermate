@@ -32,6 +32,13 @@ And run with:
 ruby do_it.rb
 ```
 
+## Setup
+Note: you will need to run the setup.sh file or put the file 60-powermate.rules in
+/etc/udev/rules.d/
+after that you need to make sure you are a member of the group 'powermate' so
+you can access the device
+
+
 ## Events
 
 ``` ruby
