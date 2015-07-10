@@ -3,7 +3,7 @@ require 'powermate'
 pmate = Powermate::Device.scan.first
 pmate.open
 
-files = Dir["/home/lex/Documents/backgrounds/*"].select{ |x| x =~ /(png|jpg|jpeg)$/}
+files = Dir["/home/lex/Sync/backgrounds/*"].select{ |x| x =~ /(png|jpg|jpeg)$/}
 files = files.shuffle
 
 
