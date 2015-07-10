@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gemspec
-gem 'pulseaudio'
+#gem 'pulseaudio'

@@ -9,18 +9,18 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Lex Childs"]
   gem.email         = ["lexchilds@gmail.com"]
   gem.description   = %q{powermate events}
-  gem.summary       = %q{powermate events}
-  gem.homepage      = ""
+  gem.summary       = "a small lib to tie into powermate events"
+  gem.homepage      = "https://github.com/lex148/powermate"
 
   dependencies = %w''
   dependencies.each do |d|
     gem.add_dependency d
   end
 
-  dependencies = %w'rake minitest pry'
-  dependencies.each do |d|
-    gem.add_development_dependency d
-  end
+  #dependencies = %w'rake minitest pry'
+  #dependencies.each do |d|
+  #  gem.add_development_dependency d
+  #end
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
