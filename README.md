@@ -1,6 +1,6 @@
 # Powermate
 
-powermate is a gem trigger things to happen when your powermate is turned
+this is a gem to trigger things to happen when you turn your powermate
 
 ``` ruby
 # do_it.rb
