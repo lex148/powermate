@@ -1,25 +1,25 @@
 require 'powermate'
 
-#gem install pulseaudio
-require 'pulseaudio'
-
 
 pmate = Powermate::Device.scan.first
 pmate.open
 
+sinks = `pactl list sinks | grep "Sink #"`.split("\n")
+sinks = sinks.map{|s| s.match(/[0-9]+/).to_s }
+
 
 pmate.on_clockwise do |e|
-  sinks = PulseAudio::Sink.list
-  sinks.each do |sink|
-    sink.vol_incr if sink.active?
+  puts "Volume +"
+  sinks.each do |s|
+    `pactl set-sink-volume #{s} +1%`
   end
 end
 
 
 pmate.on_counter_clockwise do |e|
-  sinks = PulseAudio::Sink.list
-  sinks.each do |sink|
-    sink.vol_decr if sink.active?
+  puts "Volume -"
+  sinks.each do |s|
+    `pactl set-sink-volume #{s} -1%`
   end
 end
 
